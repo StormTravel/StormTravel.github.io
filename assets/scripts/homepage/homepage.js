@@ -10,15 +10,17 @@ $(function () {
 	var i = 0;
 	/*轮播图计数*/
 	var scroll = $(window).scrollTop();
+	var oWrap = document.querySelector('#wrap');
 	/*初始化滚动条距离*/
 	/*点击navbar添加效果*/
 	$('.weui-navbar__item').on('click', function () {
 		$(this).addClass('active').siblings('.active').removeClass('active');
 	});
 	/*touchmove函数*/
-	document.getElementById('wrap').addEventListener('touchstart', function (ev) {
+	oWrap.addEventListener('touchstart', function (ev) {
 		var touchstartY = ev.touches[0].clientY;
-		this.addEventListener('touchmove', function (ev) {
+
+		function fntouchMove(ev) {
 			var touchmoveY = ev.changedTouches[0].clientY;
 			if (touchstartY > touchmoveY) {
 				$($('.part_5')[0]).css({
@@ -32,13 +34,19 @@ $(function () {
 				});
 			}
 			touchstartY = touchmoveY;
-			this.addEventListener('touchend', function () {
-				$($('.part_5')[0]).css({
-					bottom: 0,
-					transition: '0.5s all ease'
-				});
-			})
-		}, false);
+		}
+
+		function fntouchEnd() {
+			$($('.part_5')[0]).css({
+				bottom: 0,
+				transition: '0.5s all ease'
+			});
+			oWrap.removeEventListener('touchmove', fntouchMove, false);
+			oWrap.removeEventListener('touchend', fntouchEnd, false)
+		}
+
+		this.addEventListener('touchmove', fntouchMove, false);
+		this.addEventListener('touchend', fntouchEnd, false)
 	}, false);
 	/*滚动触发函数*/
 	window.addEventListener('scroll', function () {
@@ -213,7 +221,7 @@ $(function () {
 	});
 	var part_2_x = 0;
 	var count = 0;
-	var oWrap = document.querySelector('#wrap');
+
 	var oPart_2_1 = document.querySelector('#weui-navbar_1');
 	var oPart_2_2 = document.querySelector('#weui-navbar_2');
 	oPart_2_2.querySelector('.weui-navbar__item').setAttribute('class', 'weui-navbar__item active');
@@ -226,7 +234,7 @@ $(function () {
 		var obj_2_children = obj_2.getElementsByClassName('weui-navbar__item');
 
 		function fnMove(ev) {
-			var max_right = - Math.round(((obj_1.getElementsByClassName('weui-navbar__item').length - 5) * 3.55) * 100) / 100;
+			var max_right = -Math.round(((obj_1.getElementsByClassName('weui-navbar__item').length - 5) * 3.55) * 100) / 100;
 			var oTouch = ev.targetTouches[0];
 			var moveX = oTouch.pageX;
 			if (Math.abs(moveX - downX) > 10) {
@@ -271,7 +279,6 @@ $(function () {
 
 		document.addEventListener('touchmove', fnMove, false);
 		document.addEventListener('touchend', fnEnd, false);
-		ev.preventDefault();
 	}
 
 	oPart_2_1.addEventListener('touchstart', function (ev) {
