@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="710px" height="79px" viewBox="0 0 710 79" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+    <title>bg_public_live</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M80.8333333,11 L34.0055793,11 C15.2197917,11 0,26.2223185 0,45 C0,63.7818102 15.2248165,79 34.0055793,79 L675.994421,79 C694.780208,79 710,63.7776815 710,45 C710,26.2181898 694.775184,11 675.994421,11 L99.1666667,11 L90,0 L80.8333333,11 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="710" height="79" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="bg_public_live" stroke="#EE6E66" stroke-width="2">
+            <use id="Combined-Shape" mask="url(#mask-2)" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

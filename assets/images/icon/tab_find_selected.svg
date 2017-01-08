@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+    <title>tab_find_selected</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="tab_find_selected" stroke="#5F4E56" stroke-width="4" fill="#FFF2C0">
+            <g id="Group" transform="translate(3.000000, 3.000000)">
+                <circle id="Oval-8-Copy-2" cx="19" cy="19" r="19"></circle>
+                <path d="M28.99239,8.94053155 C28.6634528,8.52829049 28.0877564,8.4458604 27.5942378,8.69315068 L15.1755402,14.5471368 C14.9288261,14.6295669 14.6821119,14.8769478 14.5998438,15.1243286 L8.59612021,27.7392131 C8.3493609,28.2338842 8.43162906,28.8110308 8.84287952,29.140887 C9.08959365,29.3882226 9.41857594,29.4706527 9.74751306,29.4706527 C9.91200421,29.4706527 10.0764954,29.3882226 10.2409865,29.3057472 L22.5774159,23.369331 C22.8241752,23.2869009 22.9886664,23.0395653 23.1531124,22.7921845 L29.2391041,10.2597301 C29.4858634,9.92996445 29.4036404,9.35277261 28.99239,8.94053155 L28.99239,8.94053155 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>

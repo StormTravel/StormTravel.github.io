@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_room_money</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="18" cy="18" r="18"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="36" height="36" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <circle id="path-3" cx="18" cy="18" r="14"></circle>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="28" height="28" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon_room_money">
+            <g id="打赏" transform="translate(2.000000, 2.000000)">
+                <use id="Oval" stroke="#5F4E56" mask="url(#mask-2)" stroke-width="4" fill="#BBAA9C" xlink:href="#path-1"></use>
+                <use id="Oval" stroke="#5F4E56" mask="url(#mask-4)" stroke-width="2" fill="#F0EEE2" xlink:href="#path-3"></use>
+                <g id="¥" transform="translate(12.000000, 9.000000)" fill="#5F4E56">
+                    <rect id="Rectangle" transform="translate(4.015801, 3.911972) rotate(-40.000000) translate(-4.015801, -3.911972) " x="3.01580108" y="0.41197158" width="2" height="7" rx="1"></rect>
+                    <rect id="Rectangle" transform="translate(8.015801, 3.911972) scale(-1, 1) rotate(-40.000000) translate(-8.015801, -3.911972) " x="7.01580108" y="0.41197158" width="2" height="7" rx="1"></rect>
+                    <rect id="Rectangle-Copy" transform="translate(6.000000, 7.588028) scale(-1, 1) rotate(-90.000000) translate(-6.000000, -7.588028) " x="5" y="1.58802842" width="2" height="12" rx="1"></rect>
+                    <path d="M5,6.59050171 C5,6.036851 5.44386482,5.58802842 6,5.58802842 L6,5.58802842 C6.55228475,5.58802842 7,6.04378938 7,6.59050171 L7,16.5855551 C7,17.1392058 6.55613518,17.5880284 6,17.5880284 L6,17.5880284 C5.44771525,17.5880284 5,17.1322675 5,16.5855551 L5,6.59050171 Z" id="Rectangle-Copy-2" transform="translate(6.000000, 11.588028) scale(-1, 1) rotate(-90.000000) translate(-6.000000, -11.588028) "></path>
+                    <path d="M5,8.58342599 C5,8.03368309 5.44386482,7.58802842 6,7.58802842 L6,7.58802842 C6.55228475,7.58802842 7,8.04369282 7,8.58342599 L7,16.5926309 C7,17.1423737 6.55613518,17.5880284 6,17.5880284 L6,17.5880284 C5.44771525,17.5880284 5,17.132364 5,16.5926309 L5,8.58342599 Z" id="Rectangle-Copy-2" transform="translate(6.000000, 12.588028) scale(-1, 1) rotate(-180.000000) translate(-6.000000, -12.588028) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

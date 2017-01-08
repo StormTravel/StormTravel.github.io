@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_details_page_home</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="icon_details_page_home" stroke="#616161" stroke-width="4">
+            <path d="M8,41.4413555 C8,41.9949998 8.4556644,42.4438172 8.99539757,42.4438172 L17.0046024,42.4438172 C17.5543453,42.4438172 18,41.9963278 18,41.4453149 L18,33.4503217 C18,31.2375904 19.7965212,29.4438172 21.9958262,29.4438172 L26.0041738,29.4438172 C28.2110077,29.4438172 30,31.2377627 30,33.4503217 L30,41.4453149 C30,41.9967725 30.4556644,42.4438172 30.9953976,42.4438172 L39.0046024,42.4438172 C39.5543453,42.4438172 40,42.0043588 40,41.4413555 L40,21.4462789 C40,20.8926346 39.6946659,20.1193997 39.3125,19.7133484 L28.1100052,7.81069768 C25.840112,5.39893617 22.1645966,5.39393334 19.8899948,7.81069768 L8.6875,19.7133484 C8.30780423,20.1167752 8,20.8832755 8,21.4462789 L8,41.4413555 Z" id="Path-6"></path>
+        </g>
+    </g>
+</svg>
