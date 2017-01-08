@@ -3,60 +3,61 @@ $height-part1: 9.375rem;
 $height-part2: 3.95rem;
 @import "globel";
 
-#wrap{
-    .part_1 {
+.part_1 {
+    width: $width;
+    height: $height-part1;
+    position: relative;
+    overflow: hidden;
+    z-index: 901;
+    #tab {
 	width: $width;
 	height: $height-part1;
-	position: relative;
-	overflow: hidden;
-	z-index: 901;
-	#tab {
+	position: absolute;
+	top: 0;
+	.pic_1, .pic_2, .pic_3, .pic_4, .pic_5 {
 	    width: $width;
 	    height: $height-part1;
+	    background: skyblue;
 	    position: absolute;
 	    top: 0;
-	    .pic_1, .pic_2, .pic_3, .pic_4, .pic_5 {
-		width: $width;
-		height: $height-part1;
-		background: skyblue;
-		position: absolute;
-		top: 0;
-		left: 0;
-	    }
-	    .pic_2 {
-		left: $width;
-	    }
-	    .pic_3 {
-		left: $width * 2;
-	    }
-	    .pic_4 {
-		left: $width * 3;
-	    }
-	    .pic_5 {
-		left: $width * 4;
-	    }
+	    left: 0;
 	}
-	div {
-	    position: absolute;
-	    bottom: 1rem;
-	    right: 0.5rem;
+	.pic_2 {
+	    left: $width;
 	}
-	.point_1, .point_2 {
-	    width: 0.4rem;
-	    height: 0.4rem;
-	    background: url("../../assets/images/icon/banner_page_normal.svg") no-repeat;
-	    margin: 0 0.25rem;
-	    display: block;
-	    float: left;
+	.pic_3 {
+	    left: $width * 2;
 	}
-	.point_2 {
-	    background: url("../../assets/images/icon/banner_page_selected.svg") no-repeat;
+	.pic_4 {
+	    left: $width * 3;
+	}
+	.pic_5 {
+	    left: $width * 4;
 	}
     }
-    #part_2{
+    div {
+	position: absolute;
+	bottom: 1rem;
+	right: 0.5rem;
+    }
+    .point_1, .point_2 {
+	width: 0.4rem;
+	height: 0.4rem;
+	background: url("../../assets/images/icon/banner_page_normal.svg") no-repeat;
+	margin: 0 0.25rem;
+	display: block;
+	float: left;
+    }
+    .point_2 {
+	background: url("../../assets/images/icon/banner_page_selected.svg") no-repeat;
+    }
+}
+
+#wrap {
+    #part_2 {
 	z-index: 999;
     }
-    #part_2,.part_2{
+    #part_2, .part_2 {
 	width: $width - 1;
 	height: $height-part2 - 1;
 	position: relative;
@@ -65,13 +66,12 @@ $height-part2: 3.95rem;
 	background-color: #FFFFFF;
 	.weui-navbar {
 	    position: absolute;
-	    left:0.5rem;
+	    left: 0.5rem;
 	    display: block;
 	    z-index: 500;
 	    top: 0.5rem;
 	    background-color: #FFFFFF;
 	    height: 2.95rem;
-	    transition: 1s all ease;
 	    & + .weui-tab__panel {
 		padding-top: 50px;
 		padding-bottom: 0;
@@ -84,7 +84,7 @@ $height-part2: 3.95rem;
 	    position: relative;
 	    display: block;
 	    padding: 0 0 13px;
-	    width:3.55rem;
+	    width: 3.55rem;
 	    text-align: center;
 	    font-size: 15px;
 	    float: left;
@@ -124,8 +124,8 @@ $height-part2: 3.95rem;
 
     .part_2 {
 	position: fixed;
-	height:1.5rem;
-	padding:0.35rem 0.5rem;
+	height: 1.5rem;
+	padding: 0.35rem 0.5rem;
 	z-index: 800;
 	.weui-navbar {
 	    display: block;
@@ -133,7 +133,7 @@ $height-part2: 3.95rem;
 	    top: 0;
 	    background-color: #FFFFFF;
 	    height: 1.5rem;
-	    margin:0.35rem 0;
+	    margin: 0.35rem 0;
 	    & + .weui-tab__panel {
 		padding-top: 50px;
 		padding-bottom: 0;
@@ -141,17 +141,17 @@ $height-part2: 3.95rem;
 	    &:after {
 		border: none;
 	    }
-	    .active{
-		p{
+	    .active {
+		p {
 		    background-color: #fff2c0;
-		    border-radius: 0.6rem  0.6rem 0.3rem 0.3rem ;
+		    border-radius: 0.6rem 0.6rem 0.3rem 0.3rem;
 		    color: #ee6e66;
 		}
 	    }
-	    p{
-		width:3rem;
-		margin:0 auto;
-		height:1.5rem;
+	    p {
+		width: 3rem;
+		margin: 0 auto;
+		height: 1.5rem;
 		line-height: 1.5rem;
 
 	    }
@@ -160,7 +160,7 @@ $height-part2: 3.95rem;
 	.weui-navbar__item {
 	    position: relative;
 	    display: block;
-	    width:3.55rem;
+	    width: 3.55rem;
 	    float: left;
 	    padding: 0 0 13px;
 	    text-align: center;
@@ -197,40 +197,130 @@ $height-part2: 3.95rem;
     }
 
     .part_3 {
-	width:17.75rem;
-	padding: 0.5rem;
-	position: relative;
-	background-color: #FAFAFA;
-	ul#style_1 {
-	    width:100%;
-	    margin: 0;
-	    padding: 0;
-	    li {
-		width: 100%;
-		display: block;
-		position: relative;
-		margin-bottom: 0.5rem;
-		img.title_img {
-		    height: 8.875rem;
-		    background-color: skyblue;
-		}
-		.title {
-		    padding: 0.5rem;
-		    background: #FFFFFF;
-		    h2 {
-			width:12.5rem;
-			font-size: 0.85rem;
-			color: #616161;
-			letter-spacing: 0;
-			line-height: 1.2rem;
-			margin-bottom: 0.5rem;
+	overflow: hidden;
+	div.part_3_box{
+	    width:150rem;
+	    padding: 0.5rem;
+	    position: relative;
+	    background-color: #FAFAFA;
+	    clear: both;
+	    ul.style_1 {
+		width: 17.75rem;
+		margin: 0;
+		padding: 0;
+		float: left;
+		margin-right: 1rem;
+		li {
+		    width: 100%;
+		    display: block;
+		    position: relative;
+		    margin-bottom: 0.5rem;
+		    img.title_img {
+			height: 8.875rem;
+			background-color: skyblue;
 		    }
-		    div.box{
-			height:1.3rem;
+		    .title {
+			padding: 0.5rem;
+			background: #FFFFFF;
+			h2 {
+			    width: 12.5rem;
+			    font-size: 0.85rem;
+			    color: #616161;
+			    letter-spacing: 0;
+			    line-height: 1.2rem;
+			    margin-bottom: 0.5rem;
+			}
+			div.box {
+			    height: 1.3rem;
+			    div.time {
+				padding: 0.3rem;
+				border: 1px solid #616161;
+				border-radius: 0.6rem;
+				float: left;
+				margin-right: 1.2rem;
+				img {
+				    width: 0.55rem;
+				    height: 0.55rem;
+				    float: left;
+				    margin-right: 0.325rem;
+				    line-height: 0.6rem;
+				}
+				span {
+				    font-size: 0.55rem;
+				    color: #616161;
+				    letter-spacing: 0;
+				    margin-right: 0.5rem;
+				    line-height: 0.6rem;
+				    float: left;
+				}
+			    }
+			    div.review {
+				float: left;
+				padding: 0.3rem 0;
+				img {
+				    width: 0.7rem;
+				    height: 0.7rem;
+				    float: left;
+				    line-height: 0.7rem;
+				    margin-right: 0.25rem;
+				}
+				span {
+				    font-size: 0.55rem;
+				    color: #616161;
+				    margin-right: 0.5rem;
+				    letter-spacing: 0;
+				    line-height: 0.7rem;
+				    float: left;
+				}
+			    }
+			}
+		    }
+		    .head-img {
+			width: 2.9rem;
+			height: 3.85rem;
+			position: absolute;
+			top: 7.375rem;
+			right: 1.05rem;
+			padding: 0.1rem;
+			border-radius: 2rem 2rem 0 0;
+			background: #FFFFFF;
+			img {
+			    width: 2.9rem;
+			    height: 2.9rem;
+			    border-radius: 50%;
+			}
+			.nickname {
+			    font-size: 0.5rem;
+			    color: #717171;
+			    letter-spacing: 0;
+			    line-height: 0.7rem;
+			    text-align: center;
+			    display: inline-block;
+			    width: 100%;
+			}
+		    }
+		}
+	    }
+	    ul.style_2 {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		li {
+		    height: 4.5rem;
+		    padding: 0.5rem;
+		    background-color: #FFFFFF;
+		    position: relative;
+		    div {
+			h2 {
+			    width: 12.25rem;
+			    font-size: 0.85rem;
+			    color: #616161;
+			    letter-spacing: 0;
+			    line-height: 1rem;
+			    margin-bottom: 0.5rem;
+			}
 			div.time {
-			    padding: 0.3rem;
-			    border: 1px solid #616161;
-			    border-radius: 0.6rem;
+			    height: 0.65rem;
 			    float: left;
 			    margin-right: 1.2rem;
 			    img {
@@ -238,7 +328,7 @@ $height-part2: 3.95rem;
 				height: 0.55rem;
 				float: left;
 				margin-right: 0.325rem;
-				line-height: 0.6rem;
+				line-height: 0.65rem;
 			    }
 			    span {
 				font-size: 0.55rem;
@@ -251,7 +341,7 @@ $height-part2: 3.95rem;
 			}
 			div.review {
 			    float: left;
-			    padding: 0.3rem 0;
+			    height: 0.65rem;
 			    img {
 				width: 0.7rem;
 				height: 0.7rem;
@@ -268,121 +358,38 @@ $height-part2: 3.95rem;
 				float: left;
 			    }
 			}
-		    }
-		}
-		.head-img {
-		    width: 2.9rem;
-		    height: 3.85rem;
-		    position: absolute;
-		    top: 7.375rem;
-		    right: 1.05rem;
-		    padding: 0.1rem;
-		    border-radius: 2rem 2rem 0 0;
-		    background: #FFFFFF;
-		    img {
-			width: 2.9rem;
-			height: 2.9rem;
-			border-radius: 50%;
-		    }
-		    .nickname {
-			font-size: 0.5rem;
-			color: #717171;
-			letter-spacing: 0;
-			line-height: 0.7rem;
-			text-align: center;
-			display: inline-block;
-			width: 100%;
-		    }
-		}
-	    }
-	}
-	ul#style_2 {
-	    width: 100%;
-	    margin: 0;
-	    padding: 0;
-	    li{
-		height:4.5rem;
-		padding:0.5rem;
-		background-color: #FFFFFF;
-		position: relative;
-		div{
-		    h2{
-			width:12.25rem;
-			font-size: 0.85rem;
-			color: #616161;
-			letter-spacing: 0;
-			line-height: 1rem;
-			margin-bottom: 0.5rem;
-		    }
-		    div.time {
-			height: 0.65rem;
-			float: left;
-			margin-right: 1.2rem;
-			img {
-			    width: 0.55rem;
-			    height: 0.55rem;
-			    float: left;
-			    margin-right: 0.325rem;
-			    line-height: 0.65rem;
-			}
-			span {
-			    font-size: 0.55rem;
-			    color: #616161;
-			    letter-spacing: 0;
-			    margin-right: 0.5rem;
-			    line-height: 0.6rem;
-			    float: left;
+			div.user {
+			    height: 0.8rem;
+			    position: absolute;
+			    bottom: 0.5rem;
+			    .img {
+				width: 0.8rem;
+				height: 0.8rem;
+				border-radius: 50%;
+				float: left;
+				margin-right: 0.4rem;
+				background-color: cornsilk;
+				line-height: 1rem;
+			    }
+			    span {
+				float: left;
+				margin-right: 0.5rem;
+				font-size: 0.6rem;
+				color: #717171;
+				letter-spacing: 0;
+				line-height: 0.8rem;
+			    }
 			}
 		    }
-		    div.review {
-			float: left;
-			height: 0.65rem;
-			img {
-			    width: 0.7rem;
-			    height: 0.7rem;
-			    float: left;
-			    line-height: 0.7rem;
-			    margin-right: 0.25rem;
-			}
-			span {
-			    font-size: 0.55rem;
-			    color: #616161;
-			    margin-right: 0.5rem;
-			    letter-spacing: 0;
-			    line-height: 0.7rem;
-			    float: left;
-			}
+		    .img {
+			width: 4.5rem;
+			height: 4.5rem;
+			background: cornsilk;
 		    }
-		    div.user{
-			height:0.8rem;
-			position: absolute;
-			bottom:0.5rem;
-			.img{
-			    width: 0.8rem;
-			    height:0.8rem;
-			    border-radius: 50%;
-			    float: left;
-			    margin-right: 0.4rem;
-			    background-color: cornsilk;
-			    line-height: 1rem;
-			}
-			span{
-			    float: left;
-			    margin-right: 0.5rem;
-			    font-size: 0.6rem;
-			    color: #717171;
-			    letter-spacing: 0;
-			    line-height: 0.8rem;
-			}
-		    }
-		}
-		.img{
-		    width:4.5rem;
-		    height:4.5rem;
-		    background: cornsilk;
 		}
 	    }
 	}
+
     }
 
     .part_4 {

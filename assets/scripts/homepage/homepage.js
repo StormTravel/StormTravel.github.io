@@ -1,6 +1,6 @@
 /**
  * Created by lizhuo on 2017/1/6.
- */
+ **/
 $(function () {
 	/*$('#wrap').css({
 	 'height':document.documentElement.clientHeight
@@ -80,6 +80,8 @@ $(function () {
 	}
 
 	banner_fn();
+	/*页面初始化运行轮播图函数*/
+
 	/*Ajax*/
 	/*$.ajax({
 	 type: 'GET',
@@ -210,6 +212,13 @@ $(function () {
 	document.getElementById('weui-navbar_1').innerHTML = html_2_1;
 	document.getElementById('weui-navbar_2').innerHTML = html_2_2;
 	document.getElementById('style_1').innerHTML = html_3;
+	document.getElementById('style_2').innerHTML = html_3;
+	document.getElementById('style_3').innerHTML = html_3;
+	document.getElementById('style_4').innerHTML = html_3;
+	document.getElementById('style_5').innerHTML = html_3;
+	document.getElementById('style_6').innerHTML = html_3;
+	document.getElementById('style_7').innerHTML = html_3;
+	document.getElementById('style_8').innerHTML = html_3;
 	/*模版语法结束*/
 	/*part_2 start*/
 	/*根据数据长度更改栏目栏宽度*/
@@ -221,47 +230,115 @@ $(function () {
 	});
 	var part_2_x = 0;
 	var count = 0;
-
+	var count_1 = 0;
 	var oPart_2_1 = document.querySelector('#weui-navbar_1');
 	var oPart_2_2 = document.querySelector('#weui-navbar_2');
 	oPart_2_2.querySelector('.weui-navbar__item').setAttribute('class', 'weui-navbar__item active');
 	oPart_2_1.querySelector('.weui-navbar__item').setAttribute('class', 'weui-navbar__item active');
-	/*横向方向锁定函数*/
+	/*part_2 切换标签页*/
 	function onDir(ev, obj_1, obj_2) {
-		var oTouch = ev.targetTouches[0];
-		var downX = oTouch.pageX;
-		var obj_1_children = obj_1.getElementsByClassName('weui-navbar__item');
-		var obj_2_children = obj_2.getElementsByClassName('weui-navbar__item');
+		let oTouch = ev.targetTouches[0];
+		let downX = oTouch.pageX;
+		let disX = downX - part_2_x;
+		let obj_1_children = obj_1.getElementsByClassName('weui-navbar__item');
+		let obj_2_children = obj_2.getElementsByClassName('weui-navbar__item');
+		let bDir;
 
 		function fnMove(ev) {
-			var max_right = -Math.round(((obj_1.getElementsByClassName('weui-navbar__item').length - 5) * 3.55) * 100) / 100;
-			var oTouch = ev.targetTouches[0];
-			var moveX = oTouch.pageX;
-			if (Math.abs(moveX - downX) > 10) {
-				if (max_right < part_2_x && part_2_x < 0) {
-					if (moveX > downX) {
-						part_2_x += 3.55;
-						count--;
-					} else {
-						part_2_x += -3.55;
-						count++;
+
+			let max_right = -Math.round(((obj_1.getElementsByClassName('weui-navbar__item').length - 5) * 3.55) * 100) / 100;
+			let oTouch = ev.targetTouches[0];
+			let moveX = oTouch.pageX;
+			let moveY = oTouch.pageY;
+			if (bDir) {
+				if (bDir == 'lr') {
+					part_2_x = moveX - disX;
+					if (part_2_x > 0) {
+						part_2_x = 0;
+					} else if (part_2_x < max_right) {
+						part_2_x = max_right;
 					}
-				} else if (part_2_x == 0) {
-					if (moveX < downX) {
-						part_2_x += -3.55;
-						count++;
+					obj_1.style.WebkitTransform = 'perspective(800px) translate3d(' + part_2_x + 'rem,0,0)';
+					obj_2.style.WebkitTransform = 'perspective(800px) translate3d(' + part_2_x + 'rem,0,0)';
+					obj_1.style.WebkitTransition = '0.5s all ease';
+					obj_2.style.WebkitTransition = '0.5s all ease';
+					for (let i = 0; i < obj_1_children.length; i++) {
+						obj_1_children[i].setAttribute('class', 'weui-navbar__item');
+						obj_2_children[i].setAttribute('class', 'weui-navbar__item');
 					}
-				} else if (part_2_x == max_right) {
-					if (moveX > downX) {
-						part_2_x += 3.55;
-						count--;
+					obj_1_children[count_1].setAttribute('class', 'weui-navbar__item active');
+					obj_2_children[count_1].setAttribute('class', 'weui-navbar__item active');
+				}
+			} else {
+				if (Math.abs(moveX - downX) > 10) {
+					bDir = 'lr';
+				}
+			}
+
+		}
+
+		function fnEnd() {
+			document.removeEventListener('touchmove', fnMove, false);
+			document.removeEventListener('touchend', fnEnd, false);
+			bDir = '';
+		}
+
+		document.addEventListener('touchmove', fnMove, false);
+		document.addEventListener('touchend', fnEnd, false);
+		ev.preventDefault();
+	}
+
+	oPart_2_1.addEventListener('touchstart', function (ev) {
+		onDir(ev, oPart_2_1, oPart_2_2)
+	}, false);
+	/*part_2 end*/
+	/*part_3 start*/
+	var oPart_3 = document.querySelector('.part_3_box');
+	var part_3_x = 0;
+
+	function onDir_1(ev, obj_1, obj_2, obj_3) {
+		let oTouch = ev.targetTouches[0];
+		let downX = oTouch.pageX;
+		let downY = oTouch.pageY;
+		let obj_1_children = obj_1.getElementsByClassName('weui-navbar__item');
+		let obj_2_children = obj_2.getElementsByClassName('weui-navbar__item');
+
+		function fnMove(ev) {
+			let max_right = -Math.round(((obj_1.getElementsByClassName('weui-navbar__item').length - 5) * 3.55) * 100) / 100;
+			let oTouch = ev.targetTouches[0];
+			let moveX = oTouch.pageX;
+			let moveY = oTouch.pageY;
+			if (Math.abs(moveX - downX) > Math.abs(moveY - downY) * 50) {
+				if (moveX > downX) {
+					count--;
+					if (count < 0) {
+						count = 0;
+					}else {
+						part_3_x += 18.75;
+						if (count<3){
+							part_2_x += 3.55;
+						}
 					}
+
+				} else {
+					count++;
+					if (count > 7) {
+						count = 7
+					}else {
+						part_3_x += -18.75;
+						if (count<4){
+							part_2_x += -3.55;
+						}
+					}
+
 				}
 				part_2_x = Math.round(part_2_x * 100) / 100;
 				obj_1.style.WebkitTransform = 'perspective(800px) translate3d(' + part_2_x + 'rem,0,0)';
 				obj_2.style.WebkitTransform = 'perspective(800px) translate3d(' + part_2_x + 'rem,0,0)';
+				obj_3.style.WebkitTransform = 'perspective(800px) translate3d(' + part_3_x + 'rem,0,0)';
 				obj_1.style.WebkitTransition = '0.5s all ease';
 				obj_2.style.WebkitTransition = '0.5s all ease';
+				obj_3.style.WebkitTransition = '0.5s all ease';
 				for (let i = 0; i < obj_1_children.length; i++) {
 					obj_1_children[i].setAttribute('class', 'weui-navbar__item');
 					obj_2_children[i].setAttribute('class', 'weui-navbar__item');
@@ -281,11 +358,10 @@ $(function () {
 		document.addEventListener('touchend', fnEnd, false);
 	}
 
-	oPart_2_1.addEventListener('touchstart', function (ev) {
-		onDir(ev, oPart_2_1, oPart_2_2)
+	oPart_3.addEventListener('touchstart', function (ev) {
+		if ($(window).scrollTop() >= ($('#part_2')[0].offsetTop + $('#part_2')[0].clientHeight)) {
+			onDir_1(ev, oPart_2_1, oPart_2_2, oPart_3)
+		}
 	}, false);
-	oPart_2_2.addEventListener('touchstart', function (ev) {
-		onDir(ev, oPart_2_1, oPart_2_2)
-	}, false);
-	/*part_2 end*/
+	/*part_3 end*/
 });
